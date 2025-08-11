@@ -1,0 +1,8 @@
+symbol,slice_name,date,accuracy,precision,recall,sample_size
+GOOGL,bullish,2024-11-28,0.0,0.0,0.0,377
+GOOGL,bearish,2024-11-28,0.0,0.0,0.0,377
+GOOGL,neutral,2024-11-28,0.0,0.0,0.0,503
+GOOGL,high_volatility,2024-11-28,0.0,0.0,0.0,377
+GOOGL,low_volatility,2024-11-28,0.0,0.0,0.0,377
+GOOGL,high_volume,2024-11-28,0.0,0.0,0.0,377
+GOOGL,low_volume,2024-11-28,0.0,0.0,0.0,377

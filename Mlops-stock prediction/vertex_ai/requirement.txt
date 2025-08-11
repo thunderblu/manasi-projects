@@ -1,0 +1,7 @@
+streamlit 
+yfinance
+plotly
+google-cloud
+google-auth
+google-auth-oauthlib
+google-cloud-aiplatform
