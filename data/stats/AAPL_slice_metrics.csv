@@ -1,0 +1,8 @@
+symbol,slice_name,date,accuracy,precision,recall,sample_size
+AAPL,bullish,2024-11-28,0.0,0.0,0.0,377
+AAPL,bearish,2024-11-28,0.0,0.0,0.0,377
+AAPL,neutral,2024-11-28,0.0,0.0,0.0,503
+AAPL,high_volatility,2024-11-28,0.0,0.0,0.0,377
+AAPL,low_volatility,2024-11-28,0.0,0.0,0.0,377
+AAPL,high_volume,2024-11-28,0.0,0.0,0.0,377
+AAPL,low_volume,2024-11-28,0.0,0.0,0.0,377

@@ -1,0 +1,89 @@
+name: Stock Prediction Pipeline
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'dags/**'
+      - 'src/**'
+
+jobs:
+  trigger-dag:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Required Utilities
+      run: sudo apt-get update && sudo apt-get install -y curl jq
+
+    - name: Generate Unique DAG Run ID
+      id: unique_id
+      run: echo "dag_run_id=stock_prediction_$(date +'%Y%m%d%H%M%S')" >> $GITHUB_OUTPUT
+
+    - name: Trigger Airflow DAG
+      id: trigger_dag
+      env:
+        AIRFLOW_USERNAME: admin
+        AIRFLOW_PASSWORD: ksmhwqrzhjllqsaz
+        AIRFLOW_VM_IP: 35.188.27.227:8080
+        AIRFLOW_DAG_ID: stock_prediction_pipeline
+      run: |
+        echo "Triggering Airflow DAG: $AIRFLOW_DAG_ID with unique DAG Run ID..."
+        curl -X POST "http://$AIRFLOW_VM_IP/api/v1/dags/$AIRFLOW_DAG_ID/dagRuns" \
+             -H "Content-Type: application/json" \
+             -u "$AIRFLOW_USERNAME:$AIRFLOW_PASSWORD" \
+             -d "{\"dag_run_id\": \"${{ steps.unique_id.outputs.dag_run_id }}\"}"
+
+    - name: Wait for DAG Completion
+      id: wait_for_completion
+      env:
+        AIRFLOW_USERNAME: admin
+        AIRFLOW_PASSWORD: ksmhwqrzhjllqsaz
+        AIRFLOW_VM_IP: 35.188.27.227:8080
+        AIRFLOW_DAG_ID: stock_prediction_pipeline
+        DAG_RUN_ID: ${{ steps.unique_id.outputs.dag_run_id }}
+      run: |
+        echo "Polling for DAG run status..."
+        while true; do
+          status=$(curl -s -u "$AIRFLOW_USERNAME:$AIRFLOW_PASSWORD" \
+            "http://$AIRFLOW_VM_IP/api/v1/dags/$AIRFLOW_DAG_ID/dagRuns/$DAG_RUN_ID" \
+            | jq -r '.state')
+          echo "Current DAG run state: $status"
+          if [ "$status" == "success" ]; then
+            echo "DAG run completed successfully!"
+            break
+          elif [ "$status" == "failed" ]; then
+            echo "DAG run failed!"
+            exit 1
+          else
+            echo "DAG is still running. Waiting..."
+            sleep 10
+          fi
+        done
+
+    - name: Send Email Notification
+      if: always()
+      env:
+        SMTP_SERVER: smtp.gmail.com
+        SMTP_PORT: 587
+        EMAIL_USERNAME: ananthareddy12321@gmail.com
+        EMAIL_PASSWORD: ${{ secrets.AIRFLOW_VAR_SMTP_PASSWORD }}
+        RECIPIENT_EMAIL: dheerajkumar.1379@gmail.com
+      run: |
+        echo "Stock Prediction Pipeline Status Notification"
+        (
+          echo "Subject: Stock Prediction Pipeline Status: ${{ job.status }}"
+          echo "To: $RECIPIENT_EMAIL"
+          echo "Content-Type: text/html"
+          echo ""
+          echo "<h2>Stock Prediction Pipeline Run Status</h2>"
+          echo "<p>DAG Run ID: ${{ steps.unique_id.outputs.dag_run_id }}</p>"
+          echo "<p>Status: ${{ job.status }}</p>"
+          echo "<p>Timestamp: $(date)</p>"
+        ) > email.txt
+
+        curl --url "smtp://$SMTP_SERVER:$SMTP_PORT" --ssl-reqd \
+          --mail-from "$EMAIL_USERNAME" \
+          --mail-rcpt "$RECIPIENT_EMAIL" \
+          --upload-file email.txt \
+          --user "$EMAIL_USERNAME:$EMAIL_PASSWORD"

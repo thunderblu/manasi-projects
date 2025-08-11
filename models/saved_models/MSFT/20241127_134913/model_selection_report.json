@@ -1,0 +1,7 @@
+{
+    "best_model": "random_forest",
+    "combined_scores": {
+        "random_forest": 0.32368559519670065,
+        "xgboost": 0.2999744118991622
+    }
+}

@@ -1,0 +1,5 @@
+outs:
+- md5: 2fd377f90057c992d6db34d6ae7c0882
+  size: 582241
+  hash: md5
+  path: MSFT_mitigated.csv

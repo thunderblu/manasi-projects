@@ -1,0 +1,8 @@
+symbol,slice_name,date,accuracy,precision,recall,sample_size
+MSFT,bullish,2024-11-28,0.0,0.0,0.0,377
+MSFT,bearish,2024-11-28,0.0,0.0,0.0,377
+MSFT,neutral,2024-11-28,0.0,0.0,0.0,503
+MSFT,high_volatility,2024-11-28,0.0,0.0,0.0,377
+MSFT,low_volatility,2024-11-28,0.0,0.0,0.0,377
+MSFT,high_volume,2024-11-28,0.0,0.0,0.0,377
+MSFT,low_volume,2024-11-28,0.0,0.0,0.0,377
