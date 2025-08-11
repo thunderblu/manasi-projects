@@ -1,0 +1,66 @@
+experiment_id: "stock_prediction_production"
+
+validation_thresholds:
+  mse: 0.001
+  mae: 0.02
+  rmse: 0.03
+  r2: 0.95
+  mape: 5.0
+
+validation_settings:
+  min_samples: 1000
+  test_size: 0.2
+  random_state: 42
+
+notification:
+  slack_channel: "#model-alerts"
+  email_recipients:
+    - team@example.com
+
+bias_thresholds:
+  max_relative_difference: 0.2  # 20% difference from baseline
+  min_slice_size: 50  # Minimum samples in a slice
+
+bias_detection:
+  slice_features:
+    - volatility
+    - volume
+  check_frequency: "every_run"  # or "daily", "weekly"
+
+model_registry:
+  gcp_project: "team02-441605"
+  region: "us-central1"
+  gcs_bucket: "your-stock-prediction-bucket"
+  model_name: "stock_prediction_model"
+  serving_container: "us-docker.pkg.dev/vertex-ai/prediction/sklearn-cpu.1-0:latest"
+  parent_model: null  # Set if using model versioning
+  deployment:
+    machine_type: "n1-standard-2"
+    min_replicas: 1
+    max_replicas: 3
+
+notifications:
+  email:
+    enabled: true
+    sender: "ananthareddy12321@gmail.com"
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: "ananthareddy12321@gmail.com"
+    password: "jaei dczj aokn fcaf"  # Use app-specific password for Gmail
+    recipients:
+      - "ananthareddy6060@gmail.com"
+  
+  notification_events:
+    - training_completed
+    - validation_failed
+    - bias_detected
+    - deployment_completed
+    - pipeline_failed
+
+rollback:
+  enabled: true
+  mse_threshold: 0.001  # Maximum allowed MSE increase
+  mae_threshold: 0.02   # Maximum allowed MAE increase
+  r2_threshold: 0.05    # Maximum allowed R² decrease
+  monitoring_window: 24  # Hours to monitor before confirming rollback
+  auto_rollback: true   # Automatically rollback on threshold breach

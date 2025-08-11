@@ -1,0 +1,204 @@
+{
+  "symbol": "GOOGL",
+  "timestamp": "2024-11-28T02:37:54.858402",
+  "total_samples": 1257,
+  "slice_metrics": {
+    "overbought": {
+      "metrics": {
+        "mean_return": NaN,
+        "volatility": NaN,
+        "sample_size": 0,
+        "distribution_stats": {
+          "return_skew": NaN,
+          "return_kurtosis": NaN,
+          "volume_skew": NaN
+        },
+        "feature_correlations": {
+          "volume_return_corr": NaN,
+          "volatility_return_corr": NaN,
+          "rsi_return_corr": NaN,
+          "sp500_return_corr": NaN,
+          "dax_return_corr": NaN,
+          "gold_return_corr": NaN,
+          "nifty_return_corr": NaN
+        }
+      }
+    },
+    "oversold": {
+      "metrics": {
+        "mean_return": 0.5367008870842462,
+        "volatility": 0.29328943308504885,
+        "sample_size": 1257,
+        "distribution_stats": {
+          "return_skew": -0.05928390713002932,
+          "return_kurtosis": 0.9760357807176616,
+          "volume_skew": 0.8854146248287293
+        },
+        "feature_correlations": {
+          "volume_return_corr": -0.03824288471589448,
+          "volatility_return_corr": -0.006424071122572395,
+          "rsi_return_corr": 0.241535949394219,
+          "sp500_return_corr": 0.7553352292775893,
+          "dax_return_corr": 0.3385935360026326,
+          "gold_return_corr": 0.09208769238341022,
+          "nifty_return_corr": 0.16437296314017097
+        }
+      }
+    },
+    "neutral": {
+      "metrics": {
+        "mean_return": NaN,
+        "volatility": NaN,
+        "sample_size": 0,
+        "distribution_stats": {
+          "return_skew": NaN,
+          "return_kurtosis": NaN,
+          "volume_skew": NaN
+        },
+        "feature_correlations": {
+          "volume_return_corr": NaN,
+          "volatility_return_corr": NaN,
+          "rsi_return_corr": NaN,
+          "sp500_return_corr": NaN,
+          "dax_return_corr": NaN,
+          "gold_return_corr": NaN,
+          "nifty_return_corr": NaN
+        }
+      }
+    },
+    "high_volatility": {
+      "metrics": {
+        "mean_return": 0.5330666062790637,
+        "volatility": 0.40704339395027656,
+        "sample_size": 628,
+        "distribution_stats": {
+          "return_skew": 0.05523758489171618,
+          "return_kurtosis": 0.23563602067904066,
+          "volume_skew": 0.6518494463202577
+        },
+        "feature_correlations": {
+          "volume_return_corr": -0.019501008371243706,
+          "volatility_return_corr": 0.04355973641635512,
+          "rsi_return_corr": 0.24670707065185088,
+          "sp500_return_corr": 0.7919606482367797,
+          "dax_return_corr": 0.37979812833201965,
+          "gold_return_corr": 0.12778092011603998,
+          "nifty_return_corr": 0.19183878124482154
+        }
+      }
+    },
+    "low_volatility": {
+      "metrics": {
+        "mean_return": 0.5403293900185144,
+        "volatility": 0.1797163211242174,
+        "sample_size": 629,
+        "distribution_stats": {
+          "return_skew": -0.23462635889083755,
+          "return_kurtosis": 1.598668996958692,
+          "volume_skew": 1.1480191887401463
+        },
+        "feature_correlations": {
+          "volume_return_corr": -0.04522317202791452,
+          "volatility_return_corr": 0.008181522452884168,
+          "rsi_return_corr": 0.23576689440635457,
+          "sp500_return_corr": 0.6637522509048385,
+          "dax_return_corr": 0.25246928106640226,
+          "gold_return_corr": 0.02461391030881352,
+          "nifty_return_corr": 0.099909677427802
+        }
+      }
+    },
+    "positive_returns": {
+      "metrics": {
+        "mean_return": 0.5367008870842462,
+        "volatility": 0.29328943308504885,
+        "sample_size": 1257,
+        "distribution_stats": {
+          "return_skew": -0.05928390713002932,
+          "return_kurtosis": 0.9760357807176616,
+          "volume_skew": 0.8854146248287293
+        },
+        "feature_correlations": {
+          "volume_return_corr": -0.03824288471589448,
+          "volatility_return_corr": -0.006424071122572395,
+          "rsi_return_corr": 0.241535949394219,
+          "sp500_return_corr": 0.7553352292775893,
+          "dax_return_corr": 0.3385935360026326,
+          "gold_return_corr": 0.09208769238341022,
+          "nifty_return_corr": 0.16437296314017097
+        }
+      }
+    },
+    "negative_returns": {
+      "metrics": {
+        "mean_return": NaN,
+        "volatility": NaN,
+        "sample_size": 0,
+        "distribution_stats": {
+          "return_skew": NaN,
+          "return_kurtosis": NaN,
+          "volume_skew": NaN
+        },
+        "feature_correlations": {
+          "volume_return_corr": NaN,
+          "volatility_return_corr": NaN,
+          "rsi_return_corr": NaN,
+          "sp500_return_corr": NaN,
+          "dax_return_corr": NaN,
+          "gold_return_corr": NaN,
+          "nifty_return_corr": NaN
+        }
+      }
+    },
+    "high_volume": {
+      "metrics": {
+        "mean_return": 0.5298231639856733,
+        "volatility": 0.3793129396673212,
+        "sample_size": 314,
+        "distribution_stats": {
+          "return_skew": 0.046949640804851395,
+          "return_kurtosis": -0.8306757807703722,
+          "volume_skew": 0.3146883663726979
+        },
+        "feature_correlations": {
+          "volume_return_corr": 0.010916620798960395,
+          "volatility_return_corr": 0.0628093385751897,
+          "rsi_return_corr": 0.38806101337347626,
+          "sp500_return_corr": 0.7733036807784255,
+          "dax_return_corr": 0.38399236331678777,
+          "gold_return_corr": 0.10836037519523559,
+          "nifty_return_corr": 0.20110588026137624
+        }
+      }
+    },
+    "normal_volume": {
+      "metrics": {
+        "mean_return": 0.5389910303005261,
+        "volatility": 0.2646453386345361,
+        "sample_size": 943,
+        "distribution_stats": {
+          "return_skew": 0.038667728764933865,
+          "return_kurtosis": 0.7666387178080072,
+          "volume_skew": -0.04823126596371908
+        },
+        "feature_correlations": {
+          "volume_return_corr": -0.010082640079630023,
+          "volatility_return_corr": -0.052113518000455196,
+          "rsi_return_corr": 0.16250295599133918,
+          "sp500_return_corr": 0.7337901442100006,
+          "dax_return_corr": 0.2865069426089183,
+          "gold_return_corr": 0.08050532609524169,
+          "nifty_return_corr": 0.11854789241615625
+        }
+      }
+    }
+  },
+  "bias_indicators": [
+    "Underrepresented slice: overbought",
+    "Underrepresented slice: neutral",
+    "Underrepresented slice: negative_returns"
+  ],
+  "recommendations": [
+    "Consider resampling to balance slice sizes"
+  ]
+}

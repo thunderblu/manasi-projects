@@ -1,0 +1,5 @@
+outs:
+- md5: c4627b8b813c258b608f7421ca374f26
+  size: 582349
+  hash: md5
+  path: AAPL_mitigated.csv

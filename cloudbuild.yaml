@@ -1,0 +1,23 @@
+steps:
+- name: 'hashicorp/terraform'
+  args: ['init']
+  dir: 'terraform'
+
+- name: 'hashicorp/terraform'
+  args: ['apply', '-auto-approve']
+  dir: 'terraform'
+
+- name: 'python'
+  entrypoint: pip
+  args: ['install', '-r', 'requirements.txt']
+
+- name: 'python'
+  entrypoint: python
+  args: ['scripts/deploy_model.py']
+
+- name: 'python'
+  entrypoint: python
+  args: ['scripts/test_endpoint.py']
+
+options:
+  logging: CLOUD_LOGGING_ONLY 

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.coverage
+*.egg-info/
+venv/
+
+# MLflow
+mlruns/
+
+# DVC
+.dvc/
+
+# Environment
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# System
+.DS_Store
+credentials/
+logs/
+credentials/
+logs/

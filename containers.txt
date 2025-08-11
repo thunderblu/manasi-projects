@@ -1,0 +1,4 @@
+NAME                     IMAGE                  COMMAND                  SERVICE             CREATED         STATUS                          PORTS
+m1-airflow-scheduler-1   m1-airflow-scheduler   "/usr/bin/dumb-init …"   airflow-scheduler   2 minutes ago   Restarting (1) 17 seconds ago   
+m1-airflow-webserver-1   m1-airflow-webserver   "/usr/bin/dumb-init …"   airflow-webserver   2 minutes ago   Restarting (1) 38 seconds ago   
+m1-postgres-1            postgres:13            "docker-entrypoint.s…"   postgres            2 minutes ago   Up 2 minutes (healthy)          5432/tcp
