@@ -1,0 +1,26 @@
+{
+    "data_dir": "data/mitigated",
+    "symbols": [
+        "AAPL",
+        "GOOGL",
+        "MSFT"
+    ],
+    "target_col": "Close",
+    "feature_cols": null,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15,
+    "random_state": 42,
+    "model_type": "random_forest",
+    "n_estimators": 100,
+    "max_depth": null,
+    "learning_rate": 0.1,
+    "model_save_path": "models/saved_models",
+    "log_dir": "logs",
+    "log_level": 20,
+    "save_logs": true,
+    "project_root": "/Users/dheerajgoli/Downloads/mile1",
+    "gcp_project_id": "team02-441605",
+    "gcp_location": "us-central1",
+    "gcp_repository": "stock-models"
+}

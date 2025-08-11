@@ -1,0 +1,5 @@
+outs:
+- md5: 0d59a46db1cd7626cfc24c299195944b
+  size: 582872
+  hash: md5
+  path: GOOGL_mitigated.csv

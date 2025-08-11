@@ -1,0 +1,156 @@
+{
+  "symbol": "MSFT",
+  "timestamp": "2024-11-28T02:37:56.548403",
+  "total_samples": 1257,
+  "slice_metrics": {
+    "bullish": {
+      "slice_name": "bullish",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": 0.014556260877590543,
+        "volatility_disparity": 0.026214998605808237,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    },
+    "bearish": {
+      "slice_name": "bearish",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": -0.022907817170082,
+        "volatility_disparity": 0.04357577095651892,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    },
+    "neutral": {
+      "slice_name": "neutral",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 503,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": 0.0047305230915658525,
+        "volatility_disparity": 0.04362836891288128,
+        "high_volume_samples": 251,
+        "low_volume_samples": 252
+      }
+    },
+    "high_volatility": {
+      "slice_name": "high_volatility",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": 0.004842530897596009,
+        "volatility_disparity": 0.05314451809506423,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    },
+    "low_volatility": {
+      "slice_name": "low_volatility",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": -0.00037847448604688694,
+        "volatility_disparity": 0.01901376377242612,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    },
+    "high_volume": {
+      "slice_name": "high_volume",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": -0.014957301013763913,
+        "volatility_disparity": 0.03189035479420492,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    },
+    "low_volume": {
+      "slice_name": "low_volume",
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "sample_size": 377,
+      "feature_importance": {
+        "RSI": 0.0,
+        "Volatility": 0.0,
+        "Volume": 0.0,
+        "MA5": 0.0,
+        "MA20": 0.0
+      },
+      "disparity_metrics": {
+        "return_disparity": -0.002526850827739624,
+        "volatility_disparity": 0.009962587565572771,
+        "high_volume_samples": 188,
+        "low_volume_samples": 189
+      }
+    }
+  },
+  "recommendations": [
+    "Poor prediction accuracy in bullish slice. Consider feature engineering.",
+    "Poor prediction accuracy in bearish slice. Consider feature engineering.",
+    "Poor prediction accuracy in neutral slice. Consider feature engineering.",
+    "Poor prediction accuracy in high_volatility slice. Consider feature engineering.",
+    "Poor prediction accuracy in low_volatility slice. Consider feature engineering.",
+    "Poor prediction accuracy in high_volume slice. Consider feature engineering.",
+    "Poor prediction accuracy in low_volume slice. Consider feature engineering."
+  ]
+}

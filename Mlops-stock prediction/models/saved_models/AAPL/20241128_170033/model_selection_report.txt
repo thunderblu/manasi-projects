@@ -1,0 +1,8 @@
+Model Selection Report
+====================
+
+Selected Model: xgboost
+
+Model Scores:
+random_forest: 0.9999
+xgboost: 1.0000
